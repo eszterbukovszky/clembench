@@ -1,0 +1,21 @@
+A válaszod nem felelt meg a megadott formátumnak és/vagy tartalmi követelményeknek!
+
+Csak az alábbi struktúrált formátumokat használhatod a válaszaidban:
+JAVASLAT: {'A', 'B', 'C', …}
+Pontosan ezeknek az elemeknek a megtartásával tegyél javaslatot.
+ELUTASÍTÁS: {'A', 'B', 'C', …}
+Utasítsd el el kifejezetten a másik játékos javaslatát.
+ÉRVELÉS: {'...'}
+Védd meg az utolsó javaslatodat, vagy érvelj a játékos javaslata ellen.
+ELFOGADÁS: {'A', 'B', 'C', …}
+Fogadd el az ellenfeled javaslatát, ezzel véget vetve a játéknak.
+$STRATEGIC_REASONING_FORMAT$
+
+A másik játékosnak továbbadható válasz tartalma nem lehet üres.
+$REQUIRE_ARGUMENT$
+
+$STRATEGIC_REASONING_RULE$
+Egy struktúrált formátumban lévő címkét kettőspont és szóköz kell hogy kövessen. Az érvelésnek egy python halmaznak kell lennie, amely 0 vagy több karakterláncot tratalmaz.
+Ezért a formátum mindig így néz ki: CÍMKE: {...}
+
+Most próbáld újra.

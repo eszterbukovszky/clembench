@@ -1,0 +1,7 @@
+{
+    "agree_tag": "ELFOGADÁS:\\s*\\{.*?\\}",
+    "refusal_tag": "ELUTASÍTÁS:\\s*\\{.*?\\}",
+    "proposal_tag": "JAVASLAT:\\s*\\{.*?\\}",
+    "argument_tag": "ÉRVELÉS:\\s*\\{(?:[^{}]|\\{[^{}]*\\})*\\}",
+    "strategic_reasoning_tag": "^\\s*STRATÉGIAI MEGFONTOLÁSOK:\\s*\\{(?:[^{}]|\\{[^{}]*\\})*\\}"
+}

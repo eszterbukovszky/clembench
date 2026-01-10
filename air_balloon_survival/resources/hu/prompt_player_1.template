@@ -1,0 +1,47 @@
+Egy együttműködésen alapuló tárgyalós játékban veszel részt.
+
+Egy másik résztvevővel közösen kell megegyeznetek abban, hogy mely elemeket tartjátok meg. Mindkettőtöknek megvan a saját nézete arról, hogy számára mennyire fontosak az egyes elemek (fontosság). Nem tudod, a másik résztvevő hogyan értékeli az elemeket. Emellett minden elemhez tartozik egy erőfeszítés-érték is.
+Csak akkor egyezhettek meg egy elemkészletben, ha a kiválasztott elemek összesített erőfeszítése nem haladja meg a közös korlátot:
+
+KORLÁT = $LIMIT$
+
+Az egyes elemekhez tartozó erőfeszítés-értékek:
+
+Elemek erőfeszítése = $ITEM_WEIGHTS$
+
+Itt van, hogy számodra mennyire fontosak az egyes elemek:
+
+Elempreferencia értékek = $UTILITY_SCALE_PLAYER$
+
+Cél:
+
+A célod, hogy olyan közös elemkészletet alkudj ki, amely számodra a lehető legelőnyösebb (azaz a számodra maximális összfontosságot eredményezi), miközben a készlet összerőfeszítése nem haladja meg a KORLÁT-ot. Nem kötelező minden üzenetben JAVASLAT-ot küldeni – pusztán tárgyalni is lehet. Minden taktika megengedett!
+
+Interakciós protokoll:
+
+Üzeneteidben kizárólag az alábbi struktúrált formátumokat használhatod:
+
+JAVASLAT: {'A', 'B', 'C', …}
+Pontosan ezeknek az elemeknek a megtartását javasold.
+ELUTASÍTÁS: {'A', 'B', 'C', …}
+Kifejezetten utasítsd el a másik fél javaslatát.
+ÉRVELÉS: {'...'}
+Védd meg a saját javaslatodat, vagy érvelj a másik játékos javaslata ellen.
+ELFOGADÁS: {'A', 'B', 'C', …}
+Fogadd el a másik fél javaslatát, ezzel véget ér a játék.
+$STRATEGIC_REASONING_FORMAT$
+
+Szabályok:
+
+Csak olyan javaslatot fogadhatsz el ELFOGADÁS formátumban, amelyet a másik fél JAVASLAT segítségével tett.
+Csak olyan javaslatot utasíthatsz el ELUTASÍTÁS formátumban, amelyet a másik fél JAVASLAT-tal tett.
+Bármely JAVASLAT vagy ELFOGADÁS halmaz összesített erőfeszítése nem haladhatja meg a KORLÁT-ot.
+Ne áruld el a saját fontossági pontjaidat.
+A strukturált formátumban szereplő címkét kettőspont és szóköz kell, hogy kövesse. Az érvelés egy Python halmaz legyen, amely 0 vagy több karakterláncot tartalmaz.
+A formátumnak tehát így kell kinéznie: CÍMKE: {...}
+Szigorúan tartsd be az interakciós protokollt, és NE írj semmi mást a megadott formátumokon kívül.
+A játék akkor ér véget, ha az egyik fél ELFOGADÁS-t ad egy másik fél által JAVASLAT-tal tett javaslatra.
+A válaszodnak olyan tartalmat is kell tartalmaznia, amely továbbadható a másik játékosnak – nem lehet üres.
+Csak azok a javaslatok aktívak, amelyeket a másik játékos JAVASLAT segítségével tett, és amelyeket még nem utasítottál el ELUTASÍTÁS segítségével.
+$REQUIRE_ARGUMENT$
+$STRATEGIC_REASONING_RULE$
