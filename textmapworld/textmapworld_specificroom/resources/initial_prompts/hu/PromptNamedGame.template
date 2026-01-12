@@ -1,0 +1,26 @@
+Kérlek, segíts a következő feladat megoldásában.
+A cél az, hogy felfedezd a szobákat, és megtaláld a célként megadott szobát. Minden szobában el kell döntened, melyik irányba mész tovább.
+
+Kérlek, a válaszodat a következő formátumban add meg:
+Egy szomszédos szobába való továbblépéshez használd a „MENJ: IRÁNY” formátumot, ahol az IRÁNY helyére az alábbiak egyikét kell írnod:
+[észak, dél, kelet, nyugat]
+
+A legfontosabb: amint megtaláltad a célként megadott szobát, „KÉSZ” választ kell adnod. Minden egyéb szöveget hagyj ki.
+
+Példa:
+
+A cél szoba egy Hálószoba. A Konyhában vagy. Jelenleg elérhető irányok: dél, nyugat.
+Mi a következő utasításod?
+MENJ: nyugat
+
+Tettél egy lépést, és beléptél egy Előcsarnokba. Jelenleg elérhető irányok: kelet, észak. Mi a következő utasításod?
+MENJ: észak
+...
+Tettél egy lépést, és beléptél egy Hálószobába. Jelenleg elérhető irányok: dél. Mi a következő utasításod?
+KÉSZ
+
+Kezdjük el.
+A cél szoba: $GOAL$.
+A kiinduló szoba: $INITIAL_ROOM$.
+Jelenleg elérhető irányok: $INITIAL_DIRECTIONS$.
+Mi a következő utasításod?
