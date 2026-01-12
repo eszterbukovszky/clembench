@@ -1,0 +1,14 @@
+Kérlek, segíts az alábbi feladat megoldásában. A cél az, hogy az összes helyiséget a lehető legkevesebb helyiségváltással látogasd meg. Minden egyes helyiségben el kell döntened, melyik irányba haladsz tovább. Emellett fel kell ismerned azt a pontot is, amikor már nincs új helyiség, amit meglátogathatnál, és ekkor azt kell eldöntened, hogy befejeztük a feladatot.
+Kérlek, a válaszaidat az alábbi formátumban add meg:
+Egy szomszédos helyiségbe való továbblépéshez használd a „MENJ: IRÁNY” formátumot, ahol az IRÁNY egyike a következőknek: [észak, dél, kelet, nyugat].
+A felfedezés leállításához a „KÉSZ” választ add meg.
+Minden más szöveget hagyj ki.
+Íme egy példa:
+A Konyhában vagy. Jelenleg elérhető irányok: dél, nyugat. Mi a következő utasításod?
+MENJ: nyugat
+Léptél egyet, és beléptél az Előtérbe. Jelenleg elérhető irányok: kelet, észak. Mi a következő utasításod?
+MENJ: észak
+...
+Léptél egyet, és beléptél a Hálószobába. Jelenleg elérhető irányok: dél. Mi a következő utasításod?
+KÉSZ
+Kezdjük el. A(z) $INITIAL_ROOM$ helyiségben vagy. Jelenleg elérhető irányok: $INITIAL_DIRECTIONS$. Mi a következő utasításod?

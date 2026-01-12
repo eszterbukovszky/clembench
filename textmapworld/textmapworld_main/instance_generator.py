@@ -4,6 +4,8 @@ from typing import Dict, List
 
 from textmapworld.graph_generator import GraphGenerator
 from clemcore.clemgame import GameInstanceGenerator
+from textmapworld.textmapworld_main.config_languages import LANG_CONFIG # add
+
 
 def create_graph_file_name(game_type, graph_size, cycle_type, ambiguity):
     if cycle_type == "cycle_true":
@@ -61,44 +63,55 @@ m = 4
 instance_number = 10
 game_type = "named_graph" #"named_graph" or "unnamed_graph"
 ambiguity= None #(repetition_rooms, repetition_times) or None
-
-if strict:
-    DONE_REGEX = '^DONE$'
-    MOVE_REGEX = '^GO:\s*(north|east|west|south)$'
-    MOVE_REGEX = '^GO:\s*(north|east|west|south)$'
-else:
-    DONE_REGEX = 'DONE'
-    MOVE_REGEX = 'GO:\s*(north|east|west|south)'
-    
 loop_reminder = False
 max_turns_reminder = False
 experiments = {"small": (4,"cycle_false"), "medium": (6, "cycle_false"), "large": (8, "cycle_false"),
                "medium_cycle": (6, "cycle_true"), "large_cycle": (8, "cycle_true")}
 
 "°°°°°°°imported parameters°°°°°°°"
-prompt_file_name = 'PromptNamedGame.template' if game_type == "named_graph" else 'PromptUnnamedGame.template'
-prompt_file_name = os.path.join('resources', 'initial_prompts', prompt_file_name)
 game_name = "textmapworld_main"
 
 "-------------------------------------------------------------------------------------------------------------"
 
 class TextMapWorldMainGameInstanceGenerator(GameInstanceGenerator):
 
-    def __init__(self, ):
+    def __init__(self):
         super().__init__(os.path.dirname(__file__))
+        self.language = None
 
     def on_generate(self, seed: int, **kwargs):
+        self.language = kwargs["lang"]
+        self.cfg = LANG_CONFIG[self.language]
+        self.DONE_TOKEN = self.cfg["DONE"]
+        self.MOVE_TOKEN = self.cfg["MOVE"]
+        self.DIRECTIONS = self.cfg["DIRECTIONS"]
+        self.PROMPT_LANG_DIR = self.cfg["prompt_dir"]
+
+        self.DIRECTION_REGEX = "|".join(self.DIRECTIONS)
+
+        if strict:
+            self.RESPONSE_REGEX = '^\{\s*"action":\s*"([^{}]*?)"\s*,\s*"graph":\s*(\{\s*"nodes"\s*:\s*\[.*?\]\s*,\s*"edges"\s*:\s*\{.*?\}\s*\})\s*\}$'
+            self.DONE_REGEX = rf'^{self.DONE_TOKEN}$'
+            self.MOVE_REGEX = rf'^{self.MOVE_TOKEN}:\s*({self.DIRECTION_REGEX})$'
+        else:
+            self.RESPONSE_REGEX = "^\{[\s]*\"action\":\s*\"([^\{]*?)\"\s*,\s*\"graph\":\s*(\{\s*\"nodes\"\s*:\s*\[.*\]\s*,\s*\"edges\"\s*:\s*\{.*\})\s*\}"
+            self.DONE_REGEX = rf'^{self.DONE_TOKEN}$'
+            self.MOVE_REGEX = rf'{self.MOVE_TOKEN}:\s*({self.DIRECTION_REGEX})'
         # prepare folder for generated files
-        generated_dir = os.path.join(self.game_path, "generated")
+        generated_dir = os.path.join(self.game_path, f"generated_{self.language}")
         print("Prepare", generated_dir)
         if os.path.exists(generated_dir):
             shutil.rmtree(generated_dir)
         os.makedirs(os.path.join(generated_dir, "images"))
         os.makedirs(os.path.join(generated_dir, "graphs"))
         # perform the instance generation
-        answers_file = self.load_json("resources/initial_prompts/answers.json")
-        reminders_file = self.load_json("resources/initial_prompts/reminders.json")
-        player_a_prompt_header =  self.load_template(prompt_file_name)
+        answers_file = self.load_json(f"resources/initial_prompts/{self.PROMPT_LANG_DIR}/answers.json")
+        reminders_file = self.load_json(f"resources/initial_prompts/{self.PROMPT_LANG_DIR}/reminders.json")
+        player_a_prompt_header =  self.load_template(os.path.join(
+        "resources",
+        "initial_prompts",
+        self.PROMPT_LANG_DIR,
+        "PromptNamedGame.template",))
         if game_type == "named_graph":
             Player2_positive_answer = answers_file["PositiveAnswerNamedGame"] 
             Player2_negative_answer = answers_file["NegativeAnswerNamedGame"]
@@ -120,8 +133,9 @@ class TextMapWorldMainGameInstanceGenerator(GameInstanceGenerator):
                 game_instance["Prompt"] = player_a_prompt_header
                 game_instance["Player2_positive_answer"] = Player2_positive_answer
                 game_instance["Player2_negative_answer"] = Player2_negative_answer
-                game_instance["Move_Construction"] = MOVE_REGEX
-                game_instance["Stop_Construction"] = DONE_REGEX
+                game_instance["Move_Construction"] = self.MOVE_REGEX
+                game_instance["Stop_Construction"] = self.DONE_REGEX
+                game_instance["Response_Construction"] = self.RESPONSE_REGEX
                 game_instance["Grid_Dimension"] = str(grid["Grid_Dimension"])
                 game_instance['Graph_Nodes'] = str(grid['Graph_Nodes'])
                 game_instance['Graph_Edges'] = str(grid['Graph_Edges'])
@@ -139,9 +153,15 @@ class TextMapWorldMainGameInstanceGenerator(GameInstanceGenerator):
                 if game_type == "named_graph":
                     game_instance["Mapping"] = str(grid["Mapping"])
                 game_instance["Strict"] = strict
+                game_instance["Language"] = self.language
                 game_id += 1
 
                         
 
 if __name__ == '__main__':
-    TextMapWorldMainGameInstanceGenerator().generate(seed=42)
+    for lang in ["en", "hu"]:
+        TextMapWorldMainGameInstanceGenerator().generate(
+            filename=f"instances_main_{lang}.json",
+            seed=42,
+            lang=lang
+        )
