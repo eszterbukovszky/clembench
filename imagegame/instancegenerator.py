@@ -150,10 +150,10 @@ class ImageGameInstanceGenerator(GameInstanceGenerator):
 
                 # adjust replacement of grid dim
                 game_instance["player_1_prompt_header"] = player_a_prompt_header.replace(
-                    "GRID_DIMENSION", dim
+                    "$GRID_DIMENSION$", dim
                 )
                 game_instance["player_2_prompt_header"] = player_b_prompt_header.replace(
-                    "GRID_DIMENSION", dim
+                    "$GRID_DIMENSION$", dim
                 )
                 game_instance["player_1_question"] = prompt_question
                 game_instance['grid_dimension'] = grid_dimension
