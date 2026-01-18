@@ -5,15 +5,15 @@ Az első rács a célrács, a következő kettő pedig a zavaró rácsok.
 
 Célrács:
 
-TARGET_GRID
+$TARGET_GRID$
 
 Zavaró rács 1:
 
-SECOND_GRID
+$SECOND_GRID$
 
 Zavaró rács 2:
 
-THIRD_GRID
+$THIRD_GRID$
 
 Instrukció: Írd le a célrácsot.
 A válaszodat a „Kifejezés: ” címkével kezdd. Más szöveget ne adj meg.

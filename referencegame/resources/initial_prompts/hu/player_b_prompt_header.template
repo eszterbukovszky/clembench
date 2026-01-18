@@ -6,16 +6,16 @@ A válaszodban csak azt add meg szövegesen, hogy az első, a második vagy a ha
 
 Első:
 
-FIRST_GRID
+$FIRST_GRID$
 
 Második:
 
-SECOND_GRID
+$SECOND_GRID$
 
 Harmadik:
 
-THIRD_GRID
+$THIRD_GRID$
 
-TARGET_EXPRESSION
+$TARGET_EXPRESSION$
 Kérdés: Melyik rácsra vonatkozik a leírás?
 A válaszodat a „Válasz: ” címkével kezdd, majd add meg a választ. Más szöveget ne adj meg.
