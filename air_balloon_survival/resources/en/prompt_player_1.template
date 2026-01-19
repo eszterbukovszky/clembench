@@ -38,7 +38,7 @@ You may only REFUSE a proposal the other party has logged via PROPOSAL.
 Total effort of any PROPOSAL or AGREE set must be ≤ LIMIT.
 Do NOT reveal your hidden importance scores.
 A tag in a structured format must be followed by colon and whitespace. The argument must be a python set containing 0 or more strings.
-So, it must be of the form TAG: {...}
+So, it must be of the form "TAG: {...}"
 Strictly follow the interaction protocol and DO NOT write anything beyond the given structure.
 The game ends when one side gives an AGREE to a PROPOSAL made by the other player.
 The content in your response which can be handed to the other player has to be non-empty.
