@@ -190,6 +190,7 @@ class DealOrNoDeal(DialogueGameMaster):
             'en': 'english',
             'de': 'german',
             'it': 'italian',
+            'hu': 'hungarian',
         }[self.experiment['language']])
 
     def _does_game_proceed(self):
@@ -208,6 +209,7 @@ class DealOrNoDeal(DialogueGameMaster):
                 'en': 'proposal:',
                 'de': 'vorschlag:',
                 'it': 'proposta:',
+                'hu': 'javaslat:',
             }[self.state.language]
             if not match.startswith(prefix):
                 # The proposal submission syntax has not been followed.

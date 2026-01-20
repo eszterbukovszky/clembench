@@ -14,7 +14,7 @@ from clemcore.clemgame import GameInstanceGenerator
 
 # Different experiment configurations.
 modes = ['coop', 'semi', 'comp']
-languages = ['en', 'de', 'it']
+languages = ['en', 'de', 'it', 'hu']
 
 # Number of instances per mode and language combination.
 n_instances = 50
@@ -37,7 +37,7 @@ class DealOrNoDealGameInstanceGenerator(GameInstanceGenerator):
         self.mode = mode
         self.language = language
 
-    def on_generate(self):
+    def on_generate(self, seed=None, **kwargs):
         # Load the list of possible item words.
         item_words = self.load_json(
             f'resources/{self.language}/possible_items.json'
