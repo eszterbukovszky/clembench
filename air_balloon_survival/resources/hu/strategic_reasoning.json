@@ -1,0 +1,4 @@
+{
+ "format": "STRATÉGIAI MEGFONTOLÁSOK: {'...'}\n\tÍrd le a stratégiai megfontolásaidat vagy előrelátásaidat, amelyek döntésedet indokolják. Ez egy rejtett üzenet, amelyet a másik résztvevő nem fog látni.",
+ "rule": "A STRATÉGIAI megfontolás formátumot minden egyes üzeneted legelején pontosan egyszer kell szerepeltetned – sem többször, sem máshol nem használható. Ennek tartalmát a másik játékos nem látja, így bármit írhatsz bele, akár a saját fontossági értékeidet is. Itt lépésről lépésre indokold meg, miért ezt a lépést teszed."
+}
