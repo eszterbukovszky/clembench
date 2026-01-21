@@ -1,10 +1,10 @@
 Kérlek, segíts nekem a következő feladatban.
 A cél az, hogy az összes szobát a lehető legkevesebb szobaváltással látogassuk meg.
 Minden szobában el kell döntened, melyik irányba mész tovább, és emellett meg kell adnod egy gráfot is, amely az eddig feltárt térképet ábrázolja. Fel kell ismerned azt is, amikor már nincs több új szoba, amit meglátogathatnánk, és ekkor úgy kell döntened, hogy befejeztük.
-Válaszformátum
+
 Egy szomszédos szobába való mozgáshoz használd pontosan ezt a formátumot:
-{"action":"MENJ: DIRECTION","graph":{"nodes":[],"edges":{"north":[],"south":[],"east":[],"west":[]}}}
-A DIRECTION helyére az alábbiak egyikét írd:
+{"action":"MENJ: IRÁNY","graph":{"nodes":[],"edges":{"north":[],"south":[],"east":[],"west":[]}}}
+Az IRÁNY helyére az alábbiak egyikét írd:
 [észak, dél, kelet, nyugat]
 A felfedezés leállításához ehelyett egyszerűen ezt válaszold:
 KÉSZ
