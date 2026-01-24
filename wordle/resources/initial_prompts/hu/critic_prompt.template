@@ -1,0 +1,17 @@
+Segítségre van szükségem egy szójátékban, amelyben egy 5 betűs szót kell kitalálnunk egy utalás, egy tipp és a tipp magyarázata alapján.
+Például, ha az utalás „hófehér”, és a tipp „törpe”, akkor az információ így néz ki:
+utalás: hófehér
+magyarázat: a Hófehérke mesében hét törpe él az erdőben, és a „törpe” szó öt betűből áll.
+tipp: törpe
+A feladatod az, hogy a megadott utalás alapján egyetérts vagy ne érts egyet a tippemmel.
+Ha nem értesz egyet, akkor új tippet adok, ha pedig egyetértesz, akkor ugyanazzal a tippel folytatom a játékot.
+Kezdetben nem kapsz visszajelzést a tippről, de ahogy halad a játék, ez elérhetővé válik. A visszajelzés nem az aktuális tippre vonatkozik, hanem arra ad jelzést, hogy mely betűk szerepelhetnek a következő tippben.
+A zöld szín azt jelenti, hogy a betű helyes és jó pozícióban van,
+a sárga azt jelenti, hogy a betű helyes, de rossz helyen áll,
+a piros pedig azt jelenti, hogy a betű egyáltalán nem szerepel a szóban.
+Ezen a ponton minden megadott információt fel kell használnod — az utalást, a tippet, a magyarázatot és a visszajelzést is — annak eldöntéséhez, hogy a tipp megfelel-e az utalásnak, és hogy összhangban van-e a visszajelzéssel.
+Kérlek, kisbetűkkel válaszolj, és tartsd magad ehhez a formátumhoz:
+magyarázat: az indoklásod
+egyetértés: igen vagy nem
+Fontos: nem adhatsz új szót tippként, csak a megadott tippet értékelheted, és pontosan a fenti formátumot kell követned a válaszban.
+Kezdjük el!
