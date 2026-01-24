@@ -1,0 +1,15 @@
+Kérlek, segíts nekem a következő feladatban. A cél az, hogy felfedezd a szobákat és megtaláld a cél szobát. Minden szobában megmutatok egy képet a szobáról, és elmondom, milyen irányokba lehet továbbmenni. Te ezután pontosan egy mondatban leírod, mit látsz a szobában. Kérlek, a válaszodat a következő formátumban add meg:
+{"description": "<szoba leírása>", "action": "<akció>"}.
+A szomszédos szobába való lépéshez cseréld ki az <akció> részt erre: "MENJ: IRÁNY", ahol az IRÁNY az alábbiak egyike lehet: [észak, dél, kelet, nyugat].
+A legfontosabb: miután megtaláltuk a cél szobát, az <akció> helyére "KÉSZ"-t írj. Minden más szöveget hagyj el.
+Példa:
+A célszoba egy fürdőszoba.
+Léptünk egyet, és most ebben a szobában vagyunk. Innen a következő irányokba mehetünk: észak, nyugat. Mi a következő utasításod?
+{"description": "Egy konyhában vagyunk, ahol van egy piros hűtő.", "action": "MENJ: észak"}
+Léptünk egyet, és most ebben a szobában vagyunk. Innen a következő irányokba mehetünk: dél, kelet. Mi a következő utasításod?
+{"description": "Egy nappaliban vagyunk, ahol van egy kanapé és egy tévé.", "action": "MENJ: kelet"}
+...
+Léptünk egyet, és most ebben a szobában vagyunk. Innen a következő irányokba mehetünk: dél, kelet. Mi a következő utasításod?
+{"description": "Egy fürdőszobában vagyunk, van egy zuhany és egy mosdó.", "action": "KÉSZ"}
+Kezdjük el. A célszoba: $GOAL$
+Most ebben a szobában vagyunk. Innen a következő irányokba mehetünk: $INITIAL_DIRECTIONS$. Mi a következő utasításod?
