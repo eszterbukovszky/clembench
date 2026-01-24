@@ -1,0 +1,20 @@
+Jelenleg ebben a szobában vagyunk. Kérlek, segíts nekem a következő feladatban. A cél az, hogy a lehető legkevesebb szobaváltással meglátogassuk az összes szobát. Minden szobában le kell írnod, mit látsz, és ki kell választanod, merre menjünk tovább. Emellett fel kell ismerned, amikor már nincs új szoba, amit meglátogathatnánk, és ekkor el kell döntened, hogy befejeztük.
+Kérlek, a válaszodat a következő formátumban add meg:
+{"action":"<akció>", "description":"<szoba leírása>"}
+Cseréld le a <szoba leírása> részt egyetlen mondatra, amely leírja, milyen szobában vagyunk.
+A szomszédos szobába lépéshez cseréld ki az <akció> részt erre:
+MENJ: <irány>
+ahol az <irány> az alábbiak egyike lehet: [észak, dél, kelet, nyugat].
+A felfedezés leállításához cseréld ki az <akció> részt erre:
+KÉSZ
+Minden más szöveget hagyj el, és csak a fenti JSON-objektumot add meg válaszként.
+Példa:
+Ebben a szobában vagyunk. Innen a következő irányokba mehetünk: észak, nyugat. Mi a következő utasításod?
+{"action":"MENJ: észak", "description":"Egy konyhában vagyunk, ahol van egy piros hűtő."}
+Léptünk egyet, és most ebben a szobában vagyunk. Innen a következő irányokba mehetünk: dél, kelet. Mi a következő utasításod?
+{"action":"MENJ: kelet", "description":"Egy nappaliban vagyunk, ahol van egy kanapé és egy tévé."}
+...
+Léptünk egyet, és most ebben a szobában vagyunk. Innen a következő irányokba mehetünk: dél, kelet. Mi a következő utasításod?
+{"action":"KÉSZ", "description":"Egy fürdőszobában vagyunk."}
+Kezdjük el.
+Léptünk egyet, és most ebben a szobában vagyunk. Innen a következő irányokba mehetünk: $INITIAL_DIRECTIONS$. Mi a következő utasításod?

@@ -1,0 +1,8 @@
+Jelenleg ebben a szobában vagyunk. Kérlek, segíts nekem a következő feladatban. A cél az, hogy a lehető legkevesebb szobaváltással meglátogassuk az összes szobát. Minden szobában le kell írnod, mit látsz, és ki kell választanod, merre menjünk tovább. Emellett fel kell ismerned, amikor már nincs új szoba, amit meglátogathatnánk, és ekkor el kell döntened, hogy befejeztük.
+Kérlek, a válaszodat a következő formátumban add meg:
+{"description": "<szoba leírása>", "action": "<akció>"}.
+Cseréld le a <szoba leírása> részt egyetlen mondatra, amely leírja, milyen szobában vagyunk.
+A szomszédos szobába lépéshez cseréld ki az <akció> részt erre: "MENJ: IRÁNY", ahol az IRÁNY az alábbiak egyike lehet: [észak, dél, kelet, nyugat].
+A felfedezés leállításához cseréld ki az <akció> részt "KÉSZ"-re.
+Kezdjük el.
+Most ebben a szobában vagyunk. Innen a következő irányokba mehetünk: $INITIAL_DIRECTIONS$. Mit tegyünk?

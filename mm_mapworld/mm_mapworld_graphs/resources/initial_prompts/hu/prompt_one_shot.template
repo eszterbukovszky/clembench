@@ -1,0 +1,27 @@
+Jelenleg ebben a szobában vagyunk.
+Kérlek, segíts nekem a következő feladatban. A cél az, hogy a lehető legkevesebb szobaváltással meglátogassuk az összes szobát. Minden szobában le kell írnod, mit látsz, és ki kell választanod, merre menjünk tovább. Emellett egy gráfot is kell adnod, amely az eddig feltárt térképet ábrázolja. Fel kell ismerned azt is, amikor már nincs új szoba, amit meglátogathatnánk, és ekkor el kell döntened, hogy befejeztük.
+Kérlek, a válaszodat a következő formátumban add meg:
+{"action":"<akció>", "description":"<szoba leírása>", "graph": <gráf>}
+Az <akció> formátuma:
+MENJ: <irány>
+ahol az <irány> az alábbiak egyike lehet:
+[észak, dél, kelet, nyugat]
+Alternatívaként válaszd ezt, ha már feltártuk az egész térképet:
+KÉSZ
+A <szoba leírása> egyetlen mondat legyen, amely leírja a szobát, amit látsz.
+A <gráf> a térképet a következő formátumban ábrázolja:
+{"nodes":[], "edges":{"észak": [], "dél": [], "kelet": [], "nyugat": []}}
+Hagyj el minden más szöveget, és csak a JSON szótárat add meg válaszként, semmi mást!
+Példa:
+Ebben a szobában vagyunk. Innen a következő irányokba mehetünk: dél, nyugat.
+Mi a következő utasításod?
+{"action":"MENJ: észak", "description":"Egy konyhában vagyunk, ahol van egy piros hűtő.", "graph":{"nodes":["Kitchen"], "edges":{"észak": [], "dél": [], "kelet": [], "nyugat": []}}}
+Léptünk egyet, és most ebben a szobában vagyunk. Innen a következő irányokba mehetünk: kelet.
+Mi a következő utasításod?
+{"action":"MENJ: kelet", "description":"Egy nappaliban vagyunk, ahol van egy kanapé és egy tévé.", "graph":{"nodes":["Kitchen", "Living Room"], "edges":{"észak": [["Kitchen", "Living Room"]], "dél": [], "kelet": [], "nyugat": []}}}
+Léptünk egyet, és most ebben a szobában vagyunk. Innen a következő irányokba mehetünk: nyugat, dél.
+Mi a következő utasításod?
+{"action":"MENJ: dél", "description":"Egy hálószobában vagyunk, ahol két ágy és egy éjjeliszekrény van.", "graph":{"nodes":["Kitchen", "Living Room", "Bedroom"], "edges":{"észak": [["Kitchen", "Living Room"]], "dél": [], "kelet": [["Living Room", "Bedroom"]], "nyugat": []}}}
+...
+Léptünk egyet, és most ebben a szobában vagyunk. Innen a következő irányokba mehetünk: észak.
+Mi a következő utasításod?
