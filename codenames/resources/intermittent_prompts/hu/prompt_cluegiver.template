@@ -1,0 +1,5 @@
+Most adj meg egy újabb nyomot, amely a csapatod megmaradt szavai közül néhányhoz kapcsolódik, valamint a hozzájuk tartozó célszavak listáját. Ne feledd: a nyomot a „NYOM: ” kifejezéssel kezdd, új sorban, majd a vesszővel elválasztott célszavak listáját a „CÉLSZAVAK: ” kifejezéssel kezdd. Figyelem: néhány szó eltávolításra került a listákból a korábbi kérésekhez képest.
+A csapatod megmaradt szavai: $team_words.
+Az ellenfél megmaradt szavai: $opponent_words.
+A megmaradt elterelő szavak: $innocent_words.
+A megmaradt gyilkos szavak: $assassin_words.

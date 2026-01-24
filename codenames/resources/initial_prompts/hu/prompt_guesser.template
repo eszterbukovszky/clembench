@@ -1,0 +1,2 @@
+Adj meg egy legfeljebb $number szóból álló, vesszővel elválasztott listát az alábbi listából, amelyek a legjobban kapcsolódnak vagy a legszorosabban társíthatók a(z) „$clue” szóhoz. A tipp(ek) listáját mindig a „TIPP: ” kifejezéssel kezdd, és a válaszodban ne szerepeljen semmilyen más szöveg.
+$board
