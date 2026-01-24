@@ -1,6 +1,6 @@
 {
-  "no_sr_prompt": "A válaszod nem a megfelelő stratégiai indoklási címkével kezdődött. Az első struktúrált formátumnak STRATÉGIAI MEGFONTOLÁSOK: {...} alakúnak kell lennie. Próbáld újra.",
-  "no_argument_prompt": "A válaszod nem tartalmazott érvelést. Kötelező egy ÉRVELÉS: {...} formátumú részt is megadni a válaszodban. Próbáld újra.",
-  "untagged_sequence_prompt": "A válaszod címkézetlen szövegrészt tartalmazott, vagy többször használtad a STRATÉGIAI MEGFONTOLÁSOK címkét. Csak az előzőleg ismertetett struktúrált formátumokat használhatod, mégpedig CÍMKE: {...} formában.",
+  "no_sr_prompt": "A válaszod nem a megfelelő stratégiai indoklási címkével kezdődött. Az első struktúrált formátumnak 'STRATÉGIAI MEGFONTOLÁSOK: {...}' alakúnak kell lennie. Próbáld újra.",
+  "no_argument_prompt": "A válaszod nem tartalmazott érvelést. Kötelező egy 'ÉRVELÉS: {...}' formátumú részt is megadni a válaszodban. Próbáld újra.",
+  "untagged_sequence_prompt": "A válaszod címkézetlen szövegrészt tartalmazott, vagy többször használtad a STRATÉGIAI MEGFONTOLÁSOK címkét. Csak az előzőleg ismertetett struktúrált formátumokat használhatod, mégpedig 'CÍMKE: {...}' formában.",
   "only_sr_prompt": "A válaszod csak egy stratégiai indoklási címkét tartalmazott. Legalább még egy érvényes címkét is mellékelni kell, hogy a másik játékos is megkapja az üzenetet. Próbáld újra."
 }

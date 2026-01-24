@@ -38,7 +38,7 @@ Csak olyan javaslatot utasíthatsz el ELUTASÍTÁS formátumban, amelyet a mási
 Bármely JAVASLAT vagy ELFOGADÁS halmaz összesített erőfeszítése nem haladhatja meg a KORLÁT-ot.
 Ne áruld el a saját fontossági pontjaidat.
 A strukturált formátumban szereplő címkét kettőspont és szóköz kell, hogy kövesse. Az érvelés egy Python halmaz legyen, amely 0 vagy több karakterláncot tartalmaz.
-A formátumnak tehát így kell kinéznie: CÍMKE: {...}
+A formátumnak tehát így kell kinéznie: "CÍMKE: {...}"
 Szigorúan tartsd be az interakciós protokollt, és NE írj semmi mást a megadott formátumokon kívül.
 A játék akkor ér véget, ha az egyik fél ELFOGADÁS-t ad egy másik fél által JAVASLAT-tal tett javaslatra.
 A válaszodnak olyan tartalmat is kell tartalmaznia, amely továbbadható a másik játékosnak – nem lehet üres.

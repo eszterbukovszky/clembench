@@ -16,4 +16,4 @@ X ▢ ▢ ▢ ▢
 ▢ ▢ ▢ ▢ ▢
 ▢ ▢ ▢ ▢ ▢
 
-Most hozz létre egy üres, GRID_DIMENSION méretű rácsot, és hajtsd végre a következő parancsokat lépésről lépésre. Miután végrehajtottad a parancsot, csak a rácsot add vissza, minden más szöveget hagyj ki a kimenetből.
+Most hozz létre egy üres, $GRID_DIMENSION$ méretű rácsot, és hajtsd végre a következő parancsokat lépésről lépésre. Miután végrehajtottad a parancsot, csak a rácsot add vissza, minden más szöveget hagyj ki a kimenetből.
