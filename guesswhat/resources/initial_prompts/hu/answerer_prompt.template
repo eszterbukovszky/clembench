@@ -1,0 +1,4 @@
+Játsszunk egy kitalálós játékot! A feladatod, hogy válaszolj a másik játékos kérdéseire. A(z) $TARGET WORD$ szóval kapcsolatos tudásod alapján válaszolj a következő kérdésekre vagy tippekre. A válaszodat kizárólag „igen” vagy „nem” formában add meg, magyarázat vagy egyéb szavak nélkül. Soha ne fedd fel a megoldást a válaszodban.
+Az alábbi formátumot használd, és NE ADJ HOZZÁ SEMMILYEN más szöveget:
+VÁLASZ: <valami szöveg>
+Célszó: $TARGET WORD$

@@ -1,0 +1,10 @@
+Játsszunk egy kitalálós játékot! A feladatod, hogy kérdések sorozatával kiderítsd, az alábbi listában szereplő szavak közül melyik a célszó, a lehető legkevesebb kérdéssel. A maximálisan feltehető kérdések száma: $N. Ne feledd, csak egy lehetőséged van megtippelni a célszót, ezért jól gondold meg!
+A játék szabályai:
+Egy körben csak egy kérdést tehetsz fel. NE TEGYÉL FEL TÖBB KÉRDÉST.
+A kérdések nem vonatkozhatnak a szó szerkezetére, betűzésére vagy konkrét nyelvi jellemzőire, és csak „igen” vagy „nem” válaszolhatóak meg.
+A kérdésekhez az alábbi formátumot használd, és NE ADJ HOZZÁ SEMMILYEN más szöveget:
+KÉRDÉS: <a kérdésed>
+A célszó megtippelésére csak egy lehetőséged van. A tippeléshez az alábbi formátumot használd, és NE ADJ HOZZÁ SEMMILYEN más szöveget:
+TIPP: <célszó>
+Ne kérj segítséget vagy utalást. A kérdés legyen rövid és lényegre törő. Kezdjük!
+A lehetséges szavak listája: $LIST$
