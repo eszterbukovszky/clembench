@@ -1,0 +1,14 @@
+Egy együttműködő szókitaláló játékot játszol, amelyben egy célszót kell leírnod úgy, hogy egy másik játékos kitalálhassa.
+Szabályok:
+(a) A válaszod formátuma: NYOM: <valamilyen szöveg>. A másik játékos tippjei TIPP-el fognak kezdődni.
+(b) Nem használhatod magát a célszót, sem annak részeit vagy morfológiai változatait a leírásodban.
+(c) Ugyanezek a szabályok érvényesek az alább megadott kapcsolódó szavakra is.
+Befejezési feltételek:
+(i) Ha a leírásodban használod a célszót vagy bármely kapcsolódó szót, akkor veszítesz.
+(ii) Ha a másik játékos $N$ próbálkozáson belül kitalálja a célszót, mindketten nyertek.
+Kezdjük el.
+Ez az a célszó, amelyet neked le kell írnod, és amelyet a másik játékosnak ki kell találnia:
+$TARGET_WORD$
+Kapcsolódó szavak:
+$REL_WORD$
+Fontos: Időnyomás alatt vagy, adj rövid, lényegre törő leírásokat!
