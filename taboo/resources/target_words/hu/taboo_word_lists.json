@@ -1,0 +1,18 @@
+{
+  "high": [
+    { "target": "kutya", "related": ["háziállat", "ugat", "póráz"] },
+    { "target": "macska", "related": ["háziállat", "szőr", "nyávog"] },
+    { "target": "ház", "related": ["otthon", "épület", "tető"] },
+    { "target": "autó", "related": ["jármű", "vezet", "út"] }
+  ],
+  "medium": [
+    { "target": "folyó", "related": ["víz", "áramlat", "part"] },
+    { "target": "tanár", "related": ["iskola", "óra", "diák"] },
+    { "target": "számítógép", "related": ["képernyő", "billentyűzet", "program"] }
+  ],
+  "low": [
+    { "target": "iránytű", "related": ["észak", "irány", "tű"] },
+    { "target": "távcső", "related": ["csillagok", "űr", "lencse"] },
+    { "target": "suttogás", "related": ["csend", "hang", "titok"] }
+  ]
+}
